@@ -1,0 +1,78 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Carambar API",
+    "description": "API de blagues Carambar",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3001"
+    }
+  ],
+  "paths": {
+    "/api/v1/blagues": {
+      "get": {
+        "summary": "Récupérer toutes les blagues",
+        "responses": {
+          "200": {
+            "description": "Liste des blagues"
+          }
+        }
+      },
+      "post": {
+        "summary": "Créer une blague",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "question": { "type": "string" },
+                  "answer": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Blague créée"
+          }
+        }
+      }
+    },
+    "/api/v1/blagues/{id}": {
+      "get": {
+        "summary": "Récupérer une blague par ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Blague trouvée"
+          },
+          "404": {
+            "description": "Blague introuvable"
+          }
+        }
+      }
+    },
+    "/api/v1/blagues/random": {
+      "get": {
+        "summary": "Récupérer une blague aléatoire",
+        "responses": {
+          "200": {
+            "description": "Blague aléatoire"
+          }
+        }
+      }
+    }
+  }
+}
