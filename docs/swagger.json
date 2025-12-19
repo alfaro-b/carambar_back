@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:3001"
+      "url": "https://carambar-back-c4qi.onrender.com"
     }
   ],
   "paths": {
