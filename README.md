@@ -21,7 +21,6 @@ L’API est versionnée (`/api/v1`) et propose les endpoints suivants :
 
 Liens : 
 - Repository GitHub : [carambar_back](https://github.com/alfaro-b/carambar_back)
-- API en ligne : [carambar_back](https://carambar-back-c4qi.onrender.com)
 - Documentation Swagger : [Swagger](https://carambar-back-c4qi.onrender.com/api-docs)
 
 ## Frontend
